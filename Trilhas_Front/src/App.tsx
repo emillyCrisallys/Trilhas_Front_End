@@ -78,6 +78,9 @@ export default App;
 */
 
 /*TRILHA -3 */
+
+/*Exer -1,3 e 4 (Professora, usei o exercício 4 prara aplicar os demais)*/ 
+/*
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar_3";
 import Home from "./pages/Home";
@@ -104,4 +107,30 @@ export default function App() {
       </Routes>
     </Router>
   );
+}*/
+
+/*Exer - 2 - Lista de Animais */
+
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import Home from "./pages/Home_Animais";
+import Animal from "./pages/Animal";
+import "./App.css";
+
+export default function App() {
+  return (
+    <Router>
+      <div>
+        <nav className="navbar">
+          <Link to="/">Home</Link>
+          <Link to="/animal/tigre">Lista animal</Link>
+        </nav>
+
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/animal/:name" element={<Animal />} />
+        </Routes>
+      </div>
+    </Router>
+  );
 }
+

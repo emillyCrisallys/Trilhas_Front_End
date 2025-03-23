@@ -1,12 +1,30 @@
-import { useParams } from "react-router-dom";
+// src/Animal.tsx
+import React from 'react';
+import { useParams } from 'react-router-dom';
+import animalData from './AnimalData';
 
-export default function Animal() {
-  const { name } = useParams<{ name: string }>();
+const Animal: React.FC = () => {
+  
+    const { name } = useParams<{ name: string }>();
 
-  return (
-    <div className="container">
-      <h1>Animal</h1>
-      <p>O animal escolhido foi: <strong>{name}</strong></p>
-    </div>
-  );
-}
+   
+    if (!name) {
+        return <p>Nome do animal não fornecido.</p>;
+    }
+
+   
+    const animalDescription = animalData[name.toLowerCase()]; 
+
+    return (
+        <div>
+            <h1>Animal: {name}</h1>
+            {animalDescription ? (
+                <p>{animalDescription}</p>
+            ) : (
+                <p>Desculpe, não temos informações sobre esse animal.</p>
+            )}
+        </div>
+    );
+};
+
+export default Animal;

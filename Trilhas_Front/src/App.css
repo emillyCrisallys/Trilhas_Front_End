@@ -133,9 +133,6 @@ h1 {
 
 /*TRILHA - 3*/
 
-
-/*Exer_1*/
-
 body {
   justify-content: center;
   font-family: Arial, sans-serif;
@@ -255,9 +252,6 @@ ul li a:hover {
   color: white;
 }
 
-
-
-
 .footer {
   margin-top: 30px;
   padding: 10px;
@@ -265,4 +259,37 @@ ul li a:hover {
   text-align: center;
   font-size: 14px;
   border-top: 3px solid white;
+}
+*/
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+.navbar {
+  width: 100%;
+  position: fixed; 
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.9); 
+  padding: 15px 0;
+  text-align: center;
+  border-bottom: 3px solid #ffffff; 
+  z-index: 1000; 
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+  transition: color 0.3s ease-in-out;
+}
+
+.navbar a:hover {
+  color: #ffcc00;
 }
