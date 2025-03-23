@@ -1,8 +1,7 @@
-/*import React, { useState } from "react";
+/*TRILHA - 01*/
 
-
-
-TRILHA - 01
+/*
+import React, { useState } from "react";
 import { useState } from "react";
 import "./App.css";
 import Button from "./components/Button";
@@ -44,8 +43,17 @@ export default function App() {
     </>
   );
 }
+
+export default App;
+
 */
 
+
+
+
+/*TRILHA - 2*/
+
+/*
 import Counter from "./components/Contador";
 import Saudacao from "./components/Saudacao";
 import ListaTarefas from "./components/ListaTarefa";
@@ -66,3 +74,34 @@ function App() {
 }
 
 export default App;
+
+*/
+
+/*TRILHA -3 */
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Navbar from "./components/Navbar_3";
+import Home from "./pages/Home";
+import About from "./pages/About";
+import Contact from "./pages/Contact";
+import Animal from "./pages/Animal";
+import Rooms from "./pages/Rooms";
+import RoomDetails from "./pages/RoomDetails";
+import BookingSuccess from "./pages/BookingSuccess";
+import "./App.css";
+
+export default function App() {
+  return (
+    <Router>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/animal/:name" element={<Animal />} />
+        <Route path="/rooms" element={<Rooms />} />
+        <Route path="/room/:id" element={<RoomDetails />} />
+        <Route path="/booking-success" element={<BookingSuccess />} />
+      </Routes>
+    </Router>
+  );
+}
