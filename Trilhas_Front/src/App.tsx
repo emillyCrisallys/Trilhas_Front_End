@@ -1,3 +1,8 @@
+/*import React, { useState } from "react";
+
+
+
+TRILHA - 01
 import { useState } from "react";
 import "./App.css";
 import Button from "./components/Button";
@@ -39,3 +44,25 @@ export default function App() {
     </>
   );
 }
+*/
+
+import Counter from "./components/Contador";
+import Saudacao from "./components/Saudacao";
+import ListaTarefas from "./components/ListaTarefa";
+import ToggleVisibilidade from "./components/ToggleVisibilidade";
+import "./App.css";
+
+function App() {
+  return (
+    <div className="app">
+      <h1>Bem-vindo A Trilha 2</h1>
+
+      <Counter valorInicial={0} />
+      <Saudacao nomeInicial="Usuário" />
+      <ListaTarefas tarefasIniciais={["Estudar", "Trabalhar", "Treinar"]} />
+      <ToggleVisibilidade texto="Essa Lista de tarefas vai te salvar!" />
+    </div>
+  );
+}
+
+export default App;
