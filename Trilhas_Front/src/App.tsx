@@ -81,7 +81,7 @@ export default App;
 
 //Exer -1,3 e 4 (Professora, usei o exercício 4 prara aplicar os demais)*/ 
 
-
+/*
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar_3";
 import Home from "./pages/Home";
@@ -109,6 +109,7 @@ export default function App() {
     </Router>
   );
 }
+*/
 
 //Exer - 2 - Lista de Animais 
 
@@ -136,3 +137,17 @@ export default function App() {
   );
 }
 */
+
+
+//TRILHA -4
+import BuscarUsuario from './pages/BuscarUsuario';
+import CriarUsuario from "./pages/CriarUsuario";
+
+const App = () => (
+  <div>
+    <BuscarUsuario />
+    <CriarUsuario />
+  </div>
+);
+
+export default App;
